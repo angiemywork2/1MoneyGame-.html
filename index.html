@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ATM</title>
+	<!--  <link href= "style.css"> -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type = "text/javascript"></script>
+	 <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+<body>
+		<script src="app.js"></script>
+
+		<img src="https://media.giphy.com/media/8Tzm8ASdmA0rRJMYnd/giphy.gif" >
+
+	<p id="demo">
+ 	 <form>
+ 	 	<!-- <button class="button">Click Balance</button> -->
+    <input type="button" value="Balance" onclick= 'balance("400")' value() class="button" /> 
+   <!--  <input type="textbox" onclick= 'balance("300")' value='300' > -->
+   <!--  <input type="submit" name="button" id="demo" onclick="balance('200')" value=amount /> -->
+    <!-- <input type="button" value="Balance" onclick='balance("100")'> -->
+   <!--  <button onclick="getElementById('demo').innerHTML = Date()">What is the time?</button> -->
+   <!-- <input type="button" onclick="getElementById('demo').innerHTML = 'balance("100")'">Balance?> -->
+   <!--  <input type="textbox" name="amount" /> -->
+   <br>
+
+   <h2>I want to withdraw: </h2>
+   <input type="button" value="$20" onclick='withdrawAmount("20")' value() >
+   <input type="button" value="$40" onclick='withdrawAmount("40")' value() >
+   <input type="button" value="$60" onclick='withdrawAmount("60")' value() >
+   <input type="button" value="$80" onclick='withdrawAmount("80")' value() >
+   <input type="button" value="$100" onclick='withdrawAmount("100")' value() >
+   <br>
+		<br>
+  <!--  <input type="button" value="What's Left" onclick='whatIsLeft("400", "20")' value() > -->
+   <input type="button" value="If I withdraw -$20" onclick='whatIsLeft20("400", "20")' value() >
+   <!-- <input type="button" value="$40" onclick='whatIsLeft20("400", "40")' value() > -->
+   <input type="button" value="What's Left -$40" onclick='whatIsLeft20("400", "40")' value() >
+   <input type="button" value="What's Left -$60" onclick='whatIsLeft20("400", "60")' value() >
+   <input type="button" value="What's Left -$80" onclick='whatIsLeft20("400", "80")' value() >
+   <input type="button" value="What's Left -$100" onclick='whatIsLeft20("400", "100")' value() >
+  </form>
+ </p>
+
+	<input type="button" value="Deposit my allowance and Stash my balance!" onclick='balance("100")' value() id="button">
+	<br><br>
+
+	<div class="container">
+    <div class="row">
+    	<!-- Result Panel -->
+      <div class="col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Balance</h3>
+          </div>
+          <div class="panel-body">
+           <!--  <h1 id="first-number"></h1>
+            <h1 id="operator"></h1>
+            <h1 id="second-number"></h1>
+            <hr> -->
+            <h1 id="result"></h1>
+            <hr>
+             <h3 class="panel-title">Withdraw</h3>
+             <h1 id="withdraw"></h1>
+             <hr>
+             <h3 class="panel-title">How much do I have left?</h3>
+             <h1 id="newBalance"></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<input type="button" value="CLEAR" onclick='balance("100")' value() >
+	<input type="button" value="Use my allowance for the month" onclick='balance("100")' value() >
+	<input type="button" value="Cancel Transaction" onclick='withdrawAmount("0"); whatIsLeft20("400", "0")' > 
+
+
+</body>
+</html>
